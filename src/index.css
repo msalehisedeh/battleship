@@ -1,0 +1,120 @@
+*{
+	box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+.App {
+	margin: 0 auto;
+	position: relative;
+}
+.player {
+	margin: 5px;
+	float: left;
+}
+.player br {
+	clear: both;
+    display: block;
+}
+.player .green {
+	color: rgb(74,74,74);
+	font-size:52px;
+	font-weight: bold;
+	border: 1px solid gray;
+	padding: 5px;
+	float: left;
+	background-color: rgb(37,183,159);
+}
+.player .orange {
+	color: rgb(74,74,74);
+	font-size:52px;
+	font-weight: bold;
+	border: 1px solid gray;
+	padding: 5px;
+	float: left;
+	background-color: rgb(255,176,0);
+}
+.score {
+	margin: 10px;
+	padding: 10px;
+	line-heigh: 30px;
+	border-bottom: 1px solid rgb(74,74,74);
+}
+.name {
+	margin: 10px;
+}
+.player ul {
+	list-style: outside none none;
+}
+.player li {
+	height: 30px;
+}
+.player li img{
+	float: left;
+	width: 96px;
+}
+
+.battle-ground {
+	margin: 5px;
+	float: left;
+	width: 696px;
+	height: 700px;
+}
+.battle-ground .orange {
+	border: 3px solid rgb(255,176,0);
+}
+.battle-ground .green {
+	border: 3px solid rgb(37,183,159);
+}
+.battle-ground .zone {
+	width: 69px;
+	height: 69px;
+	float: left;
+	border: 1px solid rgb(151,151,151); 
+	background-size: contain!important;
+}
+.battle-ground .zone.hit{
+	background: url(assets/Hit.png) 0 0 transparent;
+}
+.battle-ground .zone.miss{
+	background: url(assets/Miss.png) 0 0 transparent;
+}
+.statistics {
+	float: left;
+	padding-top: 5px;
+}
+.statistics .zone {
+	width: 16px;
+	height: 16px;
+	float: left;
+	background-size: contain!important;
+}
+.statistics .zone.hit{
+	background: url(assets/HitSmall.png) 0 0 transparent;
+}
+.statistics .zone.miss{
+	background: url(assets/MissSmall.png) 0 0 transparent;
+}
+
+.clear-fix {clear:both;}
+
+@media screen and (max-width:830px){
+	.battle-ground {position:absolute;top:0}
+	.player {position:absolute;top:700px;width: 760px;}
+	.player  br{display:none;}
+	.player .orange {font-size: 46px;}
+	.player .green {margin-right: 10px;font-size: 46px;}
+}
+
+@media screen and (max-width:320px){
+	.battle-ground {position:absolute;top:0}
+	.player {position:absolute;top:300px}
+	.battle-ground {width: 296px;height: 300px;}
+	.battle-ground  .zone{width: 29px;height: 29px;}
+	.player .orange {font-size: 30px;}
+	.player .green {font-size: 30px;}
+	.player  br{display:block;}
+}
+
